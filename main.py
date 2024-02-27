@@ -41,6 +41,9 @@ class MainWindow(Ui_Dialog, QDialog):
     def change_key(self, key):
         self.pushButton.setText(key)
 
+    def toggle_view(self, work):
+        self.checker.setChecked(work)
+
     def start_input(self):
         global INPUT_MODE
         INPUT_MODE = True
@@ -62,6 +65,7 @@ def show(key):
 
     elif key == START_KEY:
         IS_WORKING = not IS_WORKING
+        demo.toggle_view(IS_WORKING)
 
 
 def sell():
