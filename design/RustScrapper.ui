@@ -28,10 +28,29 @@
   <property name="styleSheet">
    <string notr="true">QDialog {
 	color: white;
-	width:  600px;
-   height: 400px;
 	background-image: url(&quot;design/main.png&quot;);
 	background-repeat: no-repeat;
+}
+
+#checker::indicator {
+	border: 2px solid white;
+  	border-radius: 9px;
+	width: 15px;
+	height: 15px;
+}
+
+#checker::indicator:unchecked {
+	background-color: red;
+}
+
+#checker::indicator:checked {
+    background-color:  green;
+}
+
+QGraphicsView {
+	background-color: red;
+	border-radius: 10px;
+	border: 3px solid white;
 }
 
 QPushButton {
@@ -178,7 +197,7 @@ QLabel {
     </rect>
    </property>
    <property name="text">
-    <string>f2</string>
+    <string>F2</string>
    </property>
   </widget>
   <widget class="QLabel" name="label">
@@ -218,6 +237,25 @@ QLabel {
    </property>
    <property name="text">
     <string>NASA PRODUCTION</string>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="checker">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>260</y>
+     <width>21</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="checked">
+    <bool>false</bool>
    </property>
   </widget>
  </widget>

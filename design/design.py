@@ -19,10 +19,29 @@ class Ui_Dialog(object):
         Dialog.setMaximumSize(QtCore.QSize(550, 300))
         Dialog.setStyleSheet("QDialog {\n"
 "    color: white;\n"
-"    width:  600px;\n"
-"   height: 400px;\n"
 "    background-image: url(\"design/main.png\");\n"
 "    background-repeat: no-repeat;\n"
+"}\n"
+"\n"
+"#checker::indicator {\n"
+"    border: 2px solid white;\n"
+"      border-radius: 9px;\n"
+"    width: 15px;\n"
+"    height: 15px;\n"
+"}\n"
+"\n"
+"#checker::indicator:unchecked {\n"
+"    background-color: red;\n"
+"}\n"
+"\n"
+"#checker::indicator:checked {\n"
+"    background-color:  green;\n"
+"}\n"
+"\n"
+"QGraphicsView {\n"
+"    background-color: red;\n"
+"    border-radius: 10px;\n"
+"    border: 3px solid white;\n"
 "}\n"
 "\n"
 "QPushButton {\n"
@@ -90,6 +109,12 @@ class Ui_Dialog(object):
         self.label_2 = QtWidgets.QLabel(Dialog)
         self.label_2.setGeometry(QtCore.QRect(390, 270, 141, 20))
         self.label_2.setObjectName("label_2")
+        self.checker = QtWidgets.QCheckBox(Dialog)
+        self.checker.setEnabled(False)
+        self.checker.setGeometry(QtCore.QRect(30, 260, 21, 23))
+        self.checker.setText("")
+        self.checker.setChecked(False)
+        self.checker.setObjectName("checker")
 
         self.retranslateUi(Dialog)
         QtCore.QMetaObject.connectSlotsByName(Dialog)
