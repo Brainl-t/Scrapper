@@ -1,0 +1,10 @@
+QDialog {
+	Background-image: url("main.png");
+	width: 100%;
+	height: auto;
+	font-color: white;
+}
+
+QRadioButton {
+	color: white;
+}
